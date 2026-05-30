@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "avaliacoes", schema = "apiservicos")
+@Table(name = "avaliacoes")
 public class Avaliacao {
     //Terminou o servico vai ser aberto para usuario avaliar
     //data , comentario , e user que vai avaliar
