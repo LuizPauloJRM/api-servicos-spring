@@ -22,7 +22,7 @@ public class AvaliacaoBO {
     }
 
     //Buscar por id
-    private Avaliacao findAll(Long id){
+    public Avaliacao findById(Long id){
         return avaliacaoRepository.findById(id).orElse(null);
     }
 
