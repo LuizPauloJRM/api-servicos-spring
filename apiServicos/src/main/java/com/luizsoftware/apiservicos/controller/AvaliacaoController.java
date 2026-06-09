@@ -34,9 +34,26 @@ public class AvaliacaoController {
 
     //Created 201 -> Sucesso , criação de novo recurso
     //Request body json -> requisição convertido para objeto avaliacao
+    //No body recebo o dado que foi salvo no avaliacao BO Service
+    //Retornando um CREATED
     @PostMapping
     public ResponseEntity<Avaliacao> save(@RequestBody Avaliacao avaliacao){
         return ResponseEntity.status(HttpStatus.CREATED).body(avaliacaoBO.save(avaliacao));
     }
+
+    //Deletar um registro
+    /*
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        avaliacaoBO.delete(id);
+        return ResponseEntity.noContent().build();
+    }*/
+    
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id){
+        avaliacaoBO.delete(id);
+    }
+
 
 }
