@@ -42,13 +42,14 @@ public class AvaliacaoController {
     }
 
     //Deletar um registro
+    //Recebo um id na minha url e faço o delete retornando Void
     /*
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         avaliacaoBO.delete(id);
         return ResponseEntity.noContent().build();
     }*/
-    
+
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id){
